@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>Hexo安装 | AnSudong</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="AnSudong">
+    <meta name="author" content="AnSudong">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="AnSudong" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">AnSudong</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2011-10-19T05:15:39.000Z" itemprop="datePublished">
+          2011-10-19
+      </time>
+    
+    
+    | 
+    <a href='/tags/stu/'>stu</a>,
+    
+    <a href='/tags/hexo/'>hexo</a>
+    
+    
+</span>
+                <h1>Hexo安装</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h2 id="〇、前言："><a href="#〇、前言：" class="headerlink" title="〇、前言："></a>〇、前言：</h2><p>偶然间看到Hexo博客，纯<strong>静态</strong>感觉很不错，有种像黑客的赶脚。</p>
+<ol>
+<li>如果你对默认配置满意，只需几个命令便可秒搭一个hexo。</li>
+<li>如果你跟我一样喜欢折腾下，30分钟也足够个性化。</li>
+<li>如果你过于喜欢折腾，可以折腾个把星期，尽情的玩。</li>
+</ol>
+<h2 id="一、历史："><a href="#一、历史：" class="headerlink" title="一、历史："></a>一、历史：</h2><p>hexo出自台湾大学生tommy351之手，是一个基于Node.js的静态博客程序，其编译上百篇文字只需要几秒。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。<br><a id="more"></a></p>
+<h2 id="二、快速搭建"><a href="#二、快速搭建" class="headerlink" title="二、快速搭建"></a>二、快速搭建</h2><p>以下快速搭建hexo步骤：</p>
+<h3 id="1-git"><a href="#1-git" class="headerlink" title="1.git"></a><strong>1.git</strong></h3><blockquote>
+<p><a href="https://git-for-windows.github.io/" target="_blank" rel="external">https://git-for-windows.github.io/</a></p>
+</blockquote>
+<p>下载之后一路下一步，唯一需要注意的是，在Select Components界面，点选Simple context menu。</p>
+<h3 id="2-注册github"><a href="#2-注册github" class="headerlink" title="2.注册github"></a><strong>2.注册github</strong></h3><blockquote>
+<p><a href="https://github.com/login" target="_blank" rel="external">https://github.com/login</a></p>
+</blockquote>
+<p><img src="/images/7.jpg" alt=""></p>
+<p>这里要选定好自己的名字，因为以后这就是你博客的名字(如果你不购买独立域名的话)。</p>
+<h3 id="3-Node-js"><a href="#3-Node-js" class="headerlink" title="3.Node.js"></a><strong>3.Node.js</strong></h3><blockquote>
+<p>Node.js官方下载地址：<a href="https://nodejs.org/" target="_blank" rel="external">https://nodejs.org/</a></p>
+</blockquote>
+<p>下载好之后，双击安装，一路next即可。</p>
+<h3 id="4-安装Hexo"><a href="#4-安装Hexo" class="headerlink" title="4.安装Hexo"></a><strong>4.安装Hexo</strong></h3><p>右击任意位置，选择Git Bash Here。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo</div></pre></td></tr></table></figure></p>
+<p>报错如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">npm ERR! Error: shasum check failed for C:\Users\ADMINI~1\AppData\Local\Temp\npm</div><div class="line">-30024-KDJHJzgP\registry.npmjs.org\hexo-cli\-\hexo-cli-0.1.6.tgz</div><div class="line">npm ERR! Expected: 7dc3ab939d0889c4bed6a961605ff3e2d67f67a2</div><div class="line">npm ERR! Actual:   41de7d67a9b764352eb07c49c32fc38dd7f479b9</div><div class="line">npm ERR! From:     https://registry.npmjs.org/hexo-cli/-/hexo-cli-0.1.6.tgz</div><div class="line">npm ERR!     at d:\Program Files\nodejs\node_modules\npm\node_modules\sha\index.</div><div class="line">js:38:8</div><div class="line">npm ERR!     at ReadStream.&lt;anonymous&gt; (d:\Program Files\nodejs\node_modules\npm</div><div class="line">\node_modules\sha\index.js:85:7)</div><div class="line">npm ERR!     at ReadStream.emit (events.js:117:20)</div><div class="line">npm ERR!     at _stream_readable.js:943:16</div><div class="line">npm ERR!     at process._tickCallback (node.js:419:13)</div><div class="line">npm ERR! If you need help, you may report this *entire* log,</div><div class="line">npm ERR! including the npm and node versions, at:</div><div class="line">npm ERR!     &lt;http://github.com/npm/npm/issues&gt;</div><div class="line"></div><div class="line">npm ERR! System Windows_NT 6.2.9200</div><div class="line">npm ERR! command &quot;d:\\Program Files\\nodejs\\node.exe&quot; &quot;d:\\Program Files\\nodej</div><div class="line">s\\node_modules\\npm\\bin\\npm-cli.js&quot; &quot;install&quot; &quot;-g&quot; &quot;hexo&quot;</div><div class="line">npm ERR! cwd C:\Users\Administrator\Desktop</div><div class="line">npm ERR! node -v v0.10.31</div><div class="line">npm ERR! npm -v 1.4.23</div><div class="line">npm ERR! registry error parsing json</div><div class="line">npm ERR!</div><div class="line">npm ERR! Additional logging details can be found in:</div><div class="line">npm ERR!     C:\Users\Administrator\Desktop\npm-debug.log</div><div class="line">npm ERR! not ok code 0</div></pre></td></tr></table></figure>
+<p>莫非是因为被墙了？换国内镜像源试试。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm config set registry=&quot;http://registry.cnpmjs.org&quot;，</div></pre></td></tr></table></figure></p>
+<p>然后再次执行npm install -g hexo，成功！</p>
+<h4 id="创建文件夹"><a href="#创建文件夹" class="headerlink" title="创建文件夹"></a><strong>创建文件夹</strong></h4><p>建立网站程序的目录，比如E:\hexo，打开Git Bash，执行命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init</div></pre></td></tr></table></figure></p>
+<p>Hexo 即会在目标文件夹建立网站所需要的所有文件。</p>
+<h4 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a><strong>安装依赖包</strong></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install</div></pre></td></tr></table></figure>
+<h4 id="本地查看"><a href="#本地查看" class="headerlink" title="本地查看"></a><strong>本地查看</strong></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo s</div><div class="line">    INFO  Hexo is running at http://0.0.0.0:4000/. Press Ctrl+C to stop.</div></pre></td></tr></table></figure>
+<p>然后到浏览器输入<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> 查看效果。<br>至此，本地博客已经搭建起来了，别人看不到的。</p>
+<h3 id="5-Github部署"><a href="#5-Github部署" class="headerlink" title="5.Github部署"></a><strong>5.Github部署</strong></h3><p>在自己Github主页右下角，创建一个新的repository。比如我的Github账号是r00to1，那么我应该创建的repository名字应该是r00to1.github.io。</p>
+<p>编辑<code>_config.yml</code> (在e:\hexo下)。你在部署时，要把下面的r00to1都换成你的账号名。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository: git@github.com:r00to1/r00to1.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
+<p>据说最新版本的hexo 中，这里的 type 要写成 git，而不是 github。<br>执行下列指令即可完成部署。</p>
+<p><strong>静态化处理:</strong><br>写完了文章，我们就可以发布了。要说明的一点是hexo的静态博客框架，那什么是静态博客呢？静态博客，是只包含html, javascript, css文件的网站，没有动态的脚本。虽然我们是用Node进行的开发，但博客的发布后就与Node无关了。在发布之前，我们要通过一条命令，把所有的文章都做静态化处理，就是生成对应的html, javascript, css，使得所有的文章都是由静态文件组成的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">hexo generate</div><div class="line">[info] Files loaded in 0.895s</div><div class="line">[create] Public: js\script.js</div><div class="line">[create] Public: css\fonts\fontawesome-webfont.svg</div><div class="line">[create] Public: css\fonts\FontAwesome.otf</div><div class="line">[create] Public: css\fonts\fontawesome-webfont.ttf</div><div class="line">[create] Public: css\fonts\fontawesome-webfont.eot</div></pre></td></tr></table></figure>
+<p>接下来，我们把这个博客发布到github。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo deploy</div><div class="line">[info] Start deploying: github</div><div class="line">[info] Setting up GitHub deployment...</div><div class="line">Initialized empty Git repository in D:/workspace/javascript/nodejs-hexo/.deploy/.git/</div></pre></td></tr></table></figure></p>
+<p>如果报错：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ERROR Deployer not found: git</div></pre></td></tr></table></figure></p>
+<p>执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
+<p>然后再次执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo deploy</div></pre></td></tr></table></figure></p>
+<p>如果之前配置过github，就能成功上传了，直接访问你的地址：<a href="http://r00to1.github.io" target="_blank" rel="external">http://r00to1.github.io</a><br>如果报错如下,则必须要先配置SSH，然后才可以上传文件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">INFO  Deploying: git</div><div class="line">INFO  Clearing .deploy folder...</div><div class="line">INFO  Copying files from public folder...</div><div class="line">warning: LF will be replaced by CRLF in 2015/05/30/hello-world/index.html.</div><div class="line">The file will have its original line endings in your working directory.</div><div class="line">......</div><div class="line">*** Please tell me who you are.</div><div class="line"></div><div class="line">Run</div><div class="line"></div><div class="line">  git config --global user.email &quot;you@example.com&quot;</div><div class="line">  git config --global user.name &quot;Your Name&quot;</div><div class="line"></div><div class="line">to set your account&apos;s default identity.</div><div class="line">Omit --global to set the identity only in this repository.</div></pre></td></tr></table></figure></p>
+<h4 id="SSH-key"><a href="#SSH-key" class="headerlink" title="SSH-key"></a><strong>SSH-key</strong></h4><h5 id="设置Git的user-name和user-email"><a href="#设置Git的user-name和user-email" class="headerlink" title="设置Git的user.name和user.email"></a>设置Git的user.name和user.email</h5><p>在第一次使用Git时，你需要告诉你的协同开发者，你是谁以及你的邮箱，在你提交的时候，Git需要这两个信息。具体通过以下命令设置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.name &quot;yourname&quot;</div><div class="line">git config --global user.email &quot;youremail@email.com&quot;</div></pre></td></tr></table></figure></p>
+<p>需要注意的是，这里的name随意，邮箱是你的联系邮箱，与github完全无关。<br>查看配置命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config --list</div></pre></td></tr></table></figure></p>
+<h5 id="生成SSH密钥"><a href="#生成SSH密钥" class="headerlink" title="生成SSH密钥"></a>生成SSH密钥</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;youremail@email.com&quot;，按3个回车，密码为空(这里可以设置一个密码)。</div><div class="line">Generating public/private rsa key pair.</div><div class="line">Enter file in which to save the key (/c/Users/Administrator/.ssh/id_rsa):</div><div class="line">Created directory &apos;/c/Users/Administrator/.ssh&apos;.</div><div class="line">Enter passphrase (empty for no passphrase):</div><div class="line">Enter same passphrase again:</div><div class="line">Your identification has been saved in /c/Users/Administrator/.ssh/id_rsa.</div><div class="line">Your public key has been saved in /c/Users/Administrator/.ssh/id_rsa.pub.</div><div class="line">The key fingerprint is:</div><div class="line">e6:9e:e7:ae:ad:ee:9f:f0:e5:6b:60:63:85:e8:cd:ae youremail@email.com</div></pre></td></tr></table></figure>
+<p>在C:\Users\Administrator.ssh下，得到两个文件id_rsa和id_rsa.pub。<br>需要注意的是，命令中的-C参数，后面跟的内容是注释。也就是说，内容随意，与github完全无关。</p>
+<h4 id="在GitHub上添加SSH密钥"><a href="#在GitHub上添加SSH密钥" class="headerlink" title="在GitHub上添加SSH密钥"></a>在GitHub上添加SSH密钥</h4><p>打开id_rsa.pub，复制全文。<a href="https://github.com/settings/ssh" target="_blank" rel="external">https://github.com/settings/ssh</a> ，Add SSH key，粘贴进去。</p>
+<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">ssh git@github.com</div><div class="line"></div><div class="line">The authenticity of host &apos;github.com (192.30.252.128)&apos; can&apos;t be established.</div><div class="line">RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.</div><div class="line">Are you sure you want to continue connecting (yes/no)? yes</div><div class="line">Warning: Permanently added &apos;github.com,192.30.252.128&apos; (RSA) to the list of known hosts.</div><div class="line">Hi voidking! You&apos;ve successfully authenticated, but GitHub does not provide shell access.</div><div class="line">Connection to github.com closed.</div></pre></td></tr></table></figure>
+<p>之后再运行:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div><div class="line">INFO  Deploying: git</div><div class="line">INFO  Clearing .deploy folder...</div><div class="line">INFO  Copying files from public folder...</div><div class="line">warning: LF will be replaced by CRLF in 2011/11/11/hello-world/index.html.</div><div class="line">The file will have its original line endings in your working directory.</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>记住：每次修改本地文件后，需要hexo generate才能保存。每次使用命令时，都要在E:\hexo目录下。</p>
+</blockquote>
+<p>成功上传！打开地址，就能看到你的博客了。</p>
+<h3 id="6-配置和使用"><a href="#6-配置和使用" class="headerlink" title="6.配置和使用"></a><strong>6.配置和使用</strong></h3><p><strong>整体目录结构如下：</strong></p>
+<ul>
+<li>deploy：执行hexo deploy命令部署到GitHub上的内容目录</li>
+<li>public：执行hexo generate命令，输出的静态网页内容目录</li>
+<li>scaffolds：layout模板文件目录，其中的md文件可以添加编辑</li>
+<li>scripts：扩展脚本目录，这里可以自定义一些javascript脚本</li>
+<li>source：文章源码目录，该目录下的markdown和html文件均会被hexo处理。该页面对应repo的根目录，404文件、favicon.ico文件，CNAME文件等都应该放这里，该目录下可新建页面目录。</li>
+<li>_drafts：草稿文章</li>
+<li>_posts：发布文章</li>
+<li>themes：主题文件目录</li>
+<li>_config.yml：全局配置文件，大多数的设置都在这里</li>
+<li>package.json：应用程序数据，指明hexo的版本等信息，类似于一般软件中的关于按钮<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── .deploy</div><div class="line">├── public</div><div class="line">├── scaffolds</div><div class="line">├── scripts</div><div class="line">├── source</div><div class="line">|   ├── _drafts</div><div class="line">|   └── _posts</div><div class="line">├── themes</div><div class="line">├── _config.yml</div><div class="line">└── package.json</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>在这里，我们每次用到的就是_posts目录里的文件，而<code>_config.yml</code>文件和<code>themes</code>目录是第一次配置好就行了。<br><code>_posts</code>目录：Hexo是一个静态博客框架，因此没有数据库。文章内容都是以文本文件方式进行存储的，直接存储在<code>_posts</code>的目录。<br>Hexo天生集成了markdown，我们可以直接使用markdown语法格式写博客，例如:<code>hello-world.md</code>。新增加一篇文章，就在<code>_posts</code>目录，新建一个<code>xxx.md</code>的文件。<br><code>themes</code>目录：是存放皮肤的，包括一套Javascript+CSS样式和基于EJS的模板设置。通过在themes目录下，新建一个子目录，就可以创建一套新的皮肤，当然我们也可以直接在landscape上面修改。</p>
+<hr>
+<p><strong>e:\hexo_config.yml</strong></p>
+<p>站点配置用<code>e:\hexo\_config.yml</code>，我们来介绍下。</p>
+<ul>
+<li>站点信息: 定义标题，作者，语言</li>
+<li>URL: URL访问路径</li>
+<li>文件目录: 正文的存储目录</li>
+<li>写博客配置：文章标题，文章类型，外部链接等</li>
+<li>目录和标签：默认分类，分类图，标签图</li>
+<li>归档设置：归档的类型</li>
+<li>服务器设置：IP，访问端口，日志输出</li>
+<li>时间和日期格式： 时间显示格式，日期显示格式</li>
+<li>分页设置：每页显示数量</li>
+<li>评论：外挂的Disqus评论系统</li>
+<li>插件和皮肤：换皮肤，安装插件</li>
+<li>Markdown语言：markdown的标准</li>
+<li>CSS的stylus格式：是否允许压缩</li>
+<li>部署配置：github发布<br>`<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div></pre></td><td class="code"><pre><div class="line"># Hexo Configuration</div><div class="line">## Docs: http://hexo.io/docs/configuration.html</div><div class="line">## Source: https://github.com/hexojs/hexo/</div><div class="line"></div><div class="line"># Site 这里的配置，哪项配置反映在哪里，可以参考我的博客</div><div class="line">title: your&apos;s blog #站点名，站点左上角</div><div class="line">subtitle: Walk steps step by step #副标题，站点左上角</div><div class="line">description: Walk steps step by step #给搜索引擎看的，对站点的描述，可以自定义</div><div class="line">author: zippera #在站点左下角可以看到</div><div class="line">email: #你的联系邮箱</div><div class="line">language: zh-CN #中国人嘛，用中文</div><div class="line"></div><div class="line"># URL #这项暂不配置，绑定域名后，欲创建sitemap.xml需要配置该项</div><div class="line">## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;</div><div class="line">url: http://your.com</div><div class="line">root: /</div><div class="line">permalink: :year/:month/:day/:title/</div><div class="line">tag_dir: tags</div><div class="line">archive_dir: archives</div><div class="line">category_dir: categories</div><div class="line"></div><div class="line"># Writing 文章布局、写作格式的定义，不修改</div><div class="line">new_post_name: :title.md # File name of new posts</div><div class="line">default_layout: post</div><div class="line">auto_spacing: false # Add spaces between asian characters and western characters</div><div class="line">titlecase: false # Transform title into titlecase</div><div class="line">max_open_file: 100</div><div class="line">filename_case: 0</div><div class="line">highlight:</div><div class="line">  enable: true</div><div class="line">  backtick_code_block: true</div><div class="line">  line_number: true</div><div class="line">  tab_replace:</div><div class="line"></div><div class="line"># Category &amp; Tag</div><div class="line">default_category: uncategorized</div><div class="line">category_map:</div><div class="line">tag_map:</div><div class="line"></div><div class="line"># Archives 默认值为2，这里都修改为1，相应页面就只会列出标题，而非全文</div><div class="line">## 2: Enable pagination</div><div class="line">## 1: Disable pagination</div><div class="line">## 0: Fully Disable</div><div class="line">archive: 1</div><div class="line">category: 1</div><div class="line">tag: 1</div><div class="line"></div><div class="line"># Server 不修改</div><div class="line">## Hexo uses Connect as a server</div><div class="line">## You can customize the logger format as defined in</div><div class="line">## http://www.senchalabs.org/connect/logger.html</div><div class="line">port: 4000</div><div class="line">logger: false</div><div class="line">logger_format:</div><div class="line"></div><div class="line"># Date / Time format 日期格式，不修改</div><div class="line">## Hexo uses Moment.js to parse and display date</div><div class="line">## You can customize the date format as defined in</div><div class="line">## http://momentjs.com/docs/#/displaying/format/</div><div class="line">date_format: MMM D YYYY</div><div class="line">time_format: H:mm:ss</div><div class="line"></div><div class="line"># Pagination 每页显示文章数，可以自定义，我将10改成了5</div><div class="line">## Set per_page to 0 to disable pagination</div><div class="line">per_page: 5</div><div class="line">pagination_dir: page</div><div class="line"></div><div class="line"># Disqus Disqus插件，我们会替换成“多说”，不修改</div><div class="line">disqus_shortname:</div><div class="line"></div><div class="line"># Deployment</div><div class="line">## Docs: http://hexo.io/docs/deployment.html</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository: git@github.com:r00to1/r00to1.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="7-其他"><a href="#7-其他" class="headerlink" title="7.其他"></a><strong>7.其他</strong></h3><h4 id="hexo其他命令"><a href="#hexo其他命令" class="headerlink" title="hexo其他命令"></a><strong>hexo其他命令</strong></h4><ul>
+<li>help 查看帮助信息</li>
+<li>init 创建一个hexo项目</li>
+<li>migrate 从其他系统向hexo迁移</li>
+<li>version 查看hexo的版本</li>
+<li>–config参数，指定配置文件，代替默认的_config.yml</li>
+<li>–debug参数，调试模式，输出所有日志信息</li>
+<li>–safe参数，安全模式，禁用所有的插件和脚本</li>
+<li>–silent参数，无日志输出模式<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">hexo new &quot;postName&quot; #新建文章</div><div class="line">hexo new page &quot;pageName&quot; #新建页面</div><div class="line">hexo generate #生成静态页面至public目录</div><div class="line">hexo server #开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）</div><div class="line">hexo deploy #将.deploy目录部署到GitHub</div><div class="line">hexo help  # 查看帮助</div><div class="line">hexo version  #查看Hexo的版本</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>简写：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo generate = hexo g</div><div class="line">hexo server = hexo s</div><div class="line">hexo deploy = hexo d</div><div class="line">hexo new = hexo n</div></pre></td></tr></table></figure></p>
+<h4 id="BUG"><a href="#BUG" class="headerlink" title="BUG    "></a><strong>BUG    </strong></h4><ol>
+<li>有网友反应右键菜单中没有git bash选项，可以进入开始菜单找到git bash，然后通过cd进入相应目录执行命令。</li>
+<li>在github部署完成之后，马上访问可能出现404错误，这是正常的，（最多）等待十分钟左右就可以访问了。如果还不行，那很可能是 github 发送给你的验证邮件你没有打开看，据多方反映，验证后就没问题了。</li>
+<li>如果在hexo d之后出现fatal: ‘username.github.io’ does not appear to be a git repository，一是检查 repo 的名字是否合乎规范、是否含有大写字母、config.yml 中的 deploy 配置是否正确，二是把 git bash 关掉，重新打开再执行命令。</li>
+<li>有的同学可能不是 IT 界的，或者对shell 命令不太了解。在要求输入密码时，你输入之后密码是不显示的，这是为了安全，并非是你没输上。</li>
+<li>出现乱码的，不要使用 windows 中的「记事本」打开并编辑文件，推荐使用 sublime text，很简单。如果已经在「记事本」中编辑过，需要使用 sublime text 转码为「utf8」。</li>
+<li>安装 hexo 时卡在那儿不动，很可能是网络不给力，能全局 break wall 就好了。</li>
+<li>遇到什么其他的问题，不妨删除.deploy 和db.json 再重新生成试一试。</li>
+</ol>
+<h4 id="一些主题"><a href="#一些主题" class="headerlink" title="一些主题"></a><strong>一些主题</strong></h4><blockquote>
+<p><a href="https://github.com/hexojs/hexo/wiki/themes" target="_blank" rel="external">https://github.com/hexojs/hexo/wiki/themes</a></p>
+</blockquote>
+<p>下载下来之后拷贝到<code>themes</code>目录下，然后再<code>_config.yml</code>引用新的主题：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">theme: 新的主题文件夹名称</div></pre></td></tr></table></figure></p>
+<h4 id="多说评论"><a href="#多说评论" class="headerlink" title="多说评论"></a><strong>多说评论</strong></h4><p>在多说进行注册，获得通用代码。<br>将通用代码粘贴到<code>themes\light\layout\_partial\comment.ejs</code>里面，如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;% if ( page.comments)&#123; %&gt;</div><div class="line">&lt;section id=&quot;comment&quot;&gt;</div><div class="line">通用代码</div><div class="line">&lt;/section&gt;</div><div class="line">&lt;% &#125; %&gt;</div></pre></td></tr></table></figure></p>
+<p>具体请参考<a href="http://dev.duoshuo.com/threads/541d3b2b40b5abcd2e4df0e9" target="_blank" rel="external">《Hexo使用多说教程》</a><br>本人博客使用的是Litten开发的主题，所以修改方法是在主题模板中直接引入多说用户名即可。<br>ps：感谢Litten对模板的开发  @_@!</p>
+<h4 id="导航栏添加”关于”"><a href="#导航栏添加”关于”" class="headerlink" title="导航栏添加”关于”"></a><strong>导航栏添加”关于”</strong></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new page &quot;about&quot;</div></pre></td></tr></table></figure>
+<p>到<code>source/about/index.md</code>编辑内容。<br>在<code>/_config.yml</code>中，添加如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">menu:</div><div class="line">  关于: /about</div></pre></td></tr></table></figure></p>
+<h4 id="主页文章显示摘要"><a href="#主页文章显示摘要" class="headerlink" title=" 主页文章显示摘要"></a><strong> 主页文章显示摘要</strong></h4><p>编辑md文件的时候，在要作为摘要的文字后面添加<code>&lt;!--more--&gt;</code>即可。</p>
+<h4 id="添加自定义404页面"><a href="#添加自定义404页面" class="headerlink" title=" 添加自定义404页面"></a><strong> 添加自定义404页面</strong></h4><p>在<code>\source</code>文件夹下建立<code>404.html</code>，内容如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;http://www.qq.com/404/search_children.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<p>即可引用腾讯404找孤儿页面，也为公益事业出一番力量。<br><img src="/images/9.jpg" alt=""></p>
+<h4 id="添加数据统计"><a href="#添加数据统计" class="headerlink" title=" 添加数据统计"></a><strong> 添加数据统计</strong></h4><blockquote>
+<p>注册：<a href="http://tongji.cnzz.com/" target="_blank" rel="external">http://tongji.cnzz.com/</a></p>
+</blockquote>
+<p>将获得到的代码添加到模板的底部文件中，即可开启统计。</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2014/11/19/Mongo-x/" style="float: left;">
+        ← Mongo-x
+    </a>
+    
+    
+    <a class="pull-right" href="/2011/05/11/Markdown/">
+        初识Markdown →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+
+
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By AnSudong. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      (function(){
+        console.log('font');
+        var getCss = function(path) {
+          var head = document.getElementsByTagName('head')[0];
+          link = document.createElement('link');
+          link.href = path;
+          link.rel = 'stylesheet';
+          link.type = 'text/css';
+          head.appendChild(link);
+        };
+        getCss('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+        getCss('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+      })();
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>3_Git之保存你的更改 | AnSudong</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="AnSudong">
+    <meta name="author" content="AnSudong">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="AnSudong" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">AnSudong</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2015-01-28T05:15:39.000Z" itemprop="datePublished">
+          2015-01-28
+      </time>
+    
+    
+    | 
+    <a href='/tags/git/'>git</a>,
+    
+    <a href='/tags/指南/'>指南</a>
+    
+    
+</span>
+                <h1>3_Git之保存你的更改</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<hr>
+<blockquote>
+<p>转载：感谢<a href="https://github.com/geeeeeeeeek" target="_blank" rel="external">童仲毅</a>同学写了该系列文章，我只是搬运工，谢谢!</p>
+<p>这是一篇在<a href="https://www.atlassian.com/git/tutorials/saving-changes" target="_blank" rel="external">原文</a>基础上演绎的译文。除非另行注明，页面上所有内容采用知识共享-署名(<a href="http://creativecommons.org/licenses/by/2.5/au/deed.zh" target="_blank" rel="external">CC BY 2.5 AU</a>)协议共享。</p>
+</blockquote>
+<h2 id="git-add"><a href="#git-add" class="headerlink" title="git add"></a>git add</h2><p><code>git add</code>命令将工作目录中的变化添加到缓存区。它告诉Git你想要在下一次提交时包含这个文件的更新。但是，<code>git add</code>不会怎么影响你的仓库——在你运行<code>git commit</code>前更改都不会被记录。</p>
+<p>使用这些命令之时，你还需要<code>git status</code>来查看工作目录和缓存区的状态。</p>
+<h3 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git add &lt;file&gt;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>将<code>&lt;file&gt;</code>中的更改加入下次提交的缓存。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git add &lt;directory&gt;</div></pre></td></tr></table></figure>
+<p>将<code>&lt;directory&gt;</code>下的更改加入下次提交的缓存。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git add -p</div></pre></td></tr></table></figure>
+<p>开始交互式的缓存，你可以选择文件的一部分加入到下次提交缓存。它会向你展示一堆更改，等待你输入一个命令。<code>y</code>将这块更改加入缓存，<code>n</code>忽略这块更改，<code>s</code>将它分割成更小的块，<code>e</code>手动编辑这块更改，以及<code>q</code>退出。</p>
+<h3 id="讨论"><a href="#讨论" class="headerlink" title="讨论"></a>讨论</h3><p><code>git add</code>和<code>git commit</code>这两个命令组成了最基本的Git工作流。每一个Git用户都需要理解这两个命令，不管他们团队的协作模型是如何的。我有一千种方式可以将项目版本记录在仓库的历史中。</p>
+<p>在一个只有编辑、缓存、提交这样基本流程的项目上开发。首先，你要在工作目录中编辑你的文件。当你准备备份项目的当前状态时，你通过<code>git add</code>来缓存更改。当你对缓存的快照满意之后，你通过<code>git commit</code>将它提交到你的项目历史中去。</p>
+<p><img src="https://www.atlassian.com/git/images/tutorials/getting-started/saving-changes/01.svg" alt="Git Tutorial: git add Snapshot"></p>
+<p><code>git add</code>命令不能和 <code>svn add</code>混在一起理解，后者将文件添加到仓库中。而<code>git add</code> 发生于更抽象的 <em>更改</em> 层面。也就是说，<code>git add</code>在每次你修改一个文件时都需要被调用，而<code>svn add</code>只需要每个文件调用一次。这听上去很多余，但这样的工作流使得一个项目更容易组织。</p>
+<h4 id="缓存区"><a href="#缓存区" class="headerlink" title="缓存区"></a>缓存区</h4><p>缓存区是Git更为独特的地方之一，如果你是从SVN（甚至是Mercurial）迁移而来，那你可得花点时间理解了。你可以简单地把它想成是工作目录和项目历史之间的缓冲区。</p>
+<p>缓存允许你在实际提交到项目历史之前，将相关的更改组合成一份高度专注的快照，而不是将你上次提交以后产生的所有更改一并提交。也就是说你可以更改各种不相关的文件，然后回过去将它们按逻辑切分，将相关的更改添加到缓存，一份一份提交。在任何修改控制系统中，很重要的一点是提交必须是原子性的，以便于追踪bug，并用最小的代价回滚更改。</p>
+<h3 id="栗子"><a href="#栗子" class="headerlink" title="栗子"></a>栗子</h3><p>当你开始新项目的时候，<code>git add</code>和<code>svn import</code>类似。为了创建当前目录的初始提交，使用下面两个命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git add .</div><div class="line">git commit</div></pre></td></tr></table></figure>
+<p>当你项目设置好之后，新的文件可以通过路径传递给<code>git add</code>来添加：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git add hello.py</div><div class="line">git commit</div></pre></td></tr></table></figure>
+<p>上面的命令同样可以用于记录已有文件的更改。重复一次，Git不会区分缓存的更改来自新文件，还是仓库中已有的文件。</p>
+<h2 id="git-commit"><a href="#git-commit" class="headerlink" title="git commit"></a>git commit</h2><p><code>git commit</code>命令将缓存的快照提交到项目历史。提交的快照可以认为是项目『安全』的版本——Git永远不会改变它们，除非你这么要求。和<code>git add</code>一样，这是最重要的Git命令之一。</p>
+<p>尽管和它和<code>svn commit</code>名字一样，但实际上它们毫无关联。快照被提交到本地仓库，不会和其他Git仓库有任何交互。</p>
+<h3 id="用法-1"><a href="#用法-1" class="headerlink" title="用法"></a>用法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git commit</div></pre></td></tr></table></figure>
+<p>提交已经缓存的快照。它会运行文本编辑器，等待你输入提交信息。当你输入信息之后，保存文件，关闭编辑器，创建实际的提交。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git commit -m &quot;&lt;message&gt;&quot;</div></pre></td></tr></table></figure>
+<p>提交已经缓存的快照。但将<code>&lt;message&gt;</code>作为提交信息，而不是运行文本编辑器。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git commit -a</div></pre></td></tr></table></figure>
+<p>提交一份包含工作目录所有更改的快照。它只包含跟踪过的文件的更改（那些之前已经通过<code>git add</code>添加过的文件）。</p>
+<h3 id="讨论-1"><a href="#讨论-1" class="headerlink" title="讨论"></a>讨论</h3><p>快照总是提交到 <em>本地</em> 仓库。这一点和SVN截然不同，后者的工作拷贝提交到中央仓库。而Git不会强制你和中央仓库进行交互，直到你准备好了。就像缓存区是工作目录和项目历史之间的缓冲地带，每个开发者的本地仓库是他们贡献的代码和中央仓库之间的缓冲地带。</p>
+<p>这一点改变了Git用户基本的开发模型。Git开发者可以在本地仓库中积累一些提交，而不是一发生更改就直接提交到中央仓库。这对于SVN风格的协作有着诸多优点：更容易将功能切分成原子性的提交，让相关的提交组合在一起，发布到中央仓库之前整理好本地的历史。开发者得以在一个隔离的环境中工作，直到他们方便的时候再整合代码。</p>
+<h4 id="记录快照，而不是记录差异"><a href="#记录快照，而不是记录差异" class="headerlink" title="记录快照，而不是记录差异"></a>记录快照，而不是记录差异</h4><p>SVN和Git除了使用上存在巨大差异，它们底层的实现同样遵循截然不同的设计哲学。SVN追踪文件的 <em>变化</em> ，而Git的版本控制模型基于 <em>快照</em> 。比如说，一个SVN提交由仓库中原文件相比的差异(diff)组成。而Git在每次提交中记录文件的 <em>完整内容</em> 。</p>
+<p><img src="https://www.atlassian.com/git/images/tutorials/getting-started/saving-changes/02.svg" alt="Git Tutorial: Snapshots, Not Differences"></p>
+<p>这让很多Git操作比SVN来的快得多，因为文件的某个版本不需要通过版本间的差异组装得到——每个文件完整的修改能立刻从Git 的内部数据库中得到。</p>
+<p>Git的快照模型对它版本控制模型的方方面面都有着深远的影响，从分支到合并工具，再到协作工作流，以至于影响了所有特性。</p>
+<h3 id="栗子-1"><a href="#栗子-1" class="headerlink" title="栗子"></a>栗子</h3><p>下面这个栗子假设你编辑了<code>hello.py</code>文件的一些内容，并且准备好将它提交到项目历史。首先，你需要用<code>git add</code>缓存文件，然后提交缓存的快照。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git add hello.py</div><div class="line">git commit</div></pre></td></tr></table></figure>
+<p>它会打开一个文件编辑器（可以通过<code>git config</code>设置) 询问提交信息，同时列出将被提交的文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"># Please enter the commit message for your changes. Lines starting</div><div class="line"># with &apos;#&apos; will be ignored, and an empty message aborts the commit.</div><div class="line"># On branch master</div><div class="line"># Changes to be committed:</div><div class="line"># (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)</div><div class="line">#</div><div class="line">#modified: hello.py</div></pre></td></tr></table></figure>
+<p>Git对提交信息没有特定的格式限制，但约定俗成的格式是：在第一行用50个以内的字符总结这个提交，留一空行，然后详细阐述具体的更改。比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Change the message displayed by hello.py</div><div class="line"></div><div class="line">- Update the sayHello() function to output the user&apos;s name</div><div class="line">- Change the sayGoodbye() function to a friendlier message</div></pre></td></tr></table></figure>
+<p>注意，很多开发者倾向于在提交信息中使用一般现在时态。这样看起来更像是对仓库进行的操作，让很多改写历史的操作更加符合直觉。</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2015/01/29/2_Git/" style="float: left;">
+        ← 2_Git之创建代码仓库
+    </a>
+    
+    
+    <a class="pull-right" href="/2015/01/27/4_Git/">
+        4_Git之检查仓库状态 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+
+
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By AnSudong. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      (function(){
+        console.log('font');
+        var getCss = function(path) {
+          var head = document.getElementsByTagName('head')[0];
+          link = document.createElement('link');
+          link.href = path;
+          link.rel = 'stylesheet';
+          link.type = 'text/css';
+          head.appendChild(link);
+        };
+        getCss('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+        getCss('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+      })();
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>

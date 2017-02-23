@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>渗透测试套件BurpSuite 之 sqlmap快速执行脚本 | AnSudong</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="AnSudong">
+    <meta name="author" content="AnSudong">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="AnSudong" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">AnSudong</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2015-02-09T04:07:32.000Z" itemprop="datePublished">
+          2015-02-09
+      </time>
+    
+    
+    | 
+    <a href='/tags/burp/'>burp</a>,
+    
+    <a href='/tags/java/'>java</a>
+    
+    
+</span>
+                <h1>渗透测试套件BurpSuite 之 sqlmap快速执行脚本</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p><img src="/images/burp/1.jpg" alt="图片"></p>
+<a id="more"></a>
+<blockquote>
+<p>Burp Suite是一款信息安全从业人员必备的集 成型的渗透测试工具，它采用自动测试和半自动测试的方式，包含了 Proxy,Spider,Scanner,Intruder,Repeater,Sequencer,Decoder,Comparer等工具模块。通 过拦截HTTP/HTTPS的web数据包，充当浏览器和相关应用程序的中间人，进行拦截、修改、重放数据包进行测试，是web安全人员的一把必备的瑞士军刀。</p>
+<p>SQLmap是一款用来检测与利用SQL注入漏洞的免费开源工具，有一个非常棒的特性，即对检测与利用的自动化处理（数据库指纹、访问底层文件系统、执行命令）。</p>
+</blockquote>
+<p>在渗透的过程中,有很多时候是通过burp将抓到的包发送到sqlmap进行注入攻击,之前有同学分享过sqlmapapi的方式,今天再分享一个一键保存数据包到指定目录中(比如sqlmap目录),从而解放双手(女朋友).</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>将以下代码复制,保存为<code>Copy-to-File-to-Sqlmap-Folder.py</code><br>唯一要修改的是<code>httpPath = &quot;F:/01-tools/sqlmap&quot;</code>  这里改成你的sqlmap的执行目录,或者已经修改好的环境变量的目录中,所则会报错.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div></pre></td><td class="code"><pre><div class="line">#coding=utf-8</div><div class="line"></div><div class="line">#必须导入的库</div><div class="line">from burp import IBurpExtender</div><div class="line">from burp import IContextMenuFactory</div><div class="line">from burp import IBurpExtenderCallbacks</div><div class="line">from burp import IHttpRequestResponse</div><div class="line">from burp import IHttpListener</div><div class="line">from burp import IProxyListener</div><div class="line"></div><div class="line">#导入java库</div><div class="line">from javax.swing import JMenuItem</div><div class="line"></div><div class="line">#Python原生模块</div><div class="line">import os</div><div class="line">import subprocess</div><div class="line">import time</div><div class="line">import re</div><div class="line"></div><div class="line">#全局定义变量</div><div class="line"></div><div class="line">httpPath = &quot;F:/01-tools/sqlmap&quot;</div><div class="line"></div><div class="line">#切换路径</div><div class="line">os.chdir(httpPath)</div><div class="line"></div><div class="line">class BurpExtender(IBurpExtender, IHttpListener, IContextMenuFactory, IProxyListener, IHttpRequestResponse, IBurpExtenderCallbacks):</div><div class="line">    #必须引用的主函数,完成初始化设置</div><div class="line">    def registerExtenderCallbacks(self, callbacks):</div><div class="line">        #右键触发扫描</div><div class="line">        self._actionName = &quot;Copy to File to Sqlmap Folder&quot;</div><div class="line">        self._helers = callbacks.getHelpers()</div><div class="line">        self._callbacks = callbacks</div><div class="line">        #插件名字</div><div class="line">        callbacks.setExtensionName(&quot;Copy to File to Sqlmap Folder&quot;)</div><div class="line">        callbacks.registerHttpListener(self)</div><div class="line">        callbacks.registerContextMenuFactory(self)</div><div class="line">        callbacks.registerProxyListener(self)</div><div class="line"></div><div class="line">        return</div><div class="line"></div><div class="line">    #创建菜单右键</div><div class="line">    def createMenuItems(self, invocation):</div><div class="line">        menu = []</div><div class="line">        responses = invocation.getSelectedMessages()</div><div class="line">        if len(responses) == 1:</div><div class="line">            menu.append(JMenuItem(self._actionName, None, actionPerformed=lambda x, inv=invocation: self.sqlmapShell(inv)))</div><div class="line">            return menu</div><div class="line">        return None</div><div class="line"></div><div class="line">    #主函数</div><div class="line">    def sqlmapShell(self, invocation):</div><div class="line"></div><div class="line">        invMessage=invocation.getSelectedMessages()</div><div class="line">        request = invMessage[0].getRequest().tostring()</div><div class="line"></div><div class="line">        hostDomain=re.findall(r&quot;Host: (.+?)\r\n&quot;, request)[0].replace(&apos;.&apos;, &apos;_&apos;).replace(&apos;:&apos;, &apos;_&apos;)</div><div class="line"></div><div class="line">        #定制时间戳,以下划线分割分别是月份_日分_小时_分钟_秒</div><div class="line">        timeName=time.strftime(&quot;%m_%d_%H_%M_%S&quot;, time.localtime())</div><div class="line">        fullName = hostDomain + &quot;_&quot; + timeName + &quot;.txt&quot;</div><div class="line">        fileObj = open(fullName, &quot;w&quot;)</div><div class="line">        fileObj.write(request)</div><div class="line">        fileObj.close()</div><div class="line">        os.chdir(httpPath)</div><div class="line">        fullPathName = httpPath + hostDomain + &quot;/&quot; + fullName</div></pre></td></tr></table></figure>
+<h2 id="载入BURP"><a href="#载入BURP" class="headerlink" title="载入BURP"></a>载入BURP</h2><p><img src="/images/burp/b3.jpg" alt="图片"></p>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p><img src="/images/burp/b1.jpg" alt="图片"></p>
+<p><img src="/images/burp/b2.jpg" alt="图片"></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2015/02/19/Mac Apache、PHP、Mysql /" style="float: left;">
+        ← mac配置Apache、PHP、MySQL
+    </a>
+    
+    
+    <a class="pull-right" href="/2015/01/30/1_Git/">
+        1-Git之快速指南 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+
+
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By AnSudong. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      (function(){
+        console.log('font');
+        var getCss = function(path) {
+          var head = document.getElementsByTagName('head')[0];
+          link = document.createElement('link');
+          link.href = path;
+          link.rel = 'stylesheet';
+          link.type = 'text/css';
+          head.appendChild(link);
+        };
+        getCss('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+        getCss('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+      })();
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>

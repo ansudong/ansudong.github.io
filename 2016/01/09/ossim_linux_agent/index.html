@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>OSSIM-HIDS for linux | AnSudong</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="AnSudong">
+    <meta name="author" content="AnSudong">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="AnSudong" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">AnSudong</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-01-09T04:07:32.000Z" itemprop="datePublished">
+          2016-01-09
+      </time>
+    
+    
+    | 
+    <a href='/tags/ossim/'>ossim</a>,
+    
+    <a href='/tags/linux/'>linux</a>,
+    
+    <a href='/tags/agent/'>agent</a>,
+    
+    <a href='/tags/ossec/'>ossec</a>
+    
+    
+</span>
+                <h1>OSSIM-HIDS for linux</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>OSSIME中的HIDS是通过OSSEC来实现的，OSSEC采用服务端和客户端模式，主要通过文件完整性监视，日志监视，rootcheck和进程监视来主动监视Unix系统活动的所有方面。OSSIM中服务端已经安装完成，只需要在要监控的主机上安装客户端即可：</p>
+<blockquote>
+<p>ossec <a href="http://ossec.github.io/" target="_blank" rel="external">http://ossec.github.io/</a></p>
+</blockquote>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>安装前需要准备编译环境</p>
+<ul>
+<li>如果是Debian,需要先执行以下命令:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#apt-get install build-essential</div></pre></td></tr></table></figure>
+<p>下面以在linux主机(centos7)<code>192.168.31.97</code>上安装客户端为例<br>OSSIM_IP == <code>192.168.31.111</code></p>
+<a id="more"></a>
+<hr>
+<h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><ul>
+<li>在<code>31.97</code>上下载客户端:</li>
+</ul>
+<blockquote>
+<p><a href="https://github.com/ossec/ossec-hids/releases" target="_blank" rel="external">https://github.com/ossec/ossec-hids/releases</a></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># cd /usr/local/src/</div><div class="line"># wget http://www.ossec.net/files/ossec-hids-2.8.1.tar.gz  #下载客户端</div><div class="line"># tar -zxvf ossec-hids-2.8.1.tar.gz    #解压</div><div class="line"># cd ossec-hids-2.8.1</div><div class="line"># ./install.sh   运行install.sh</div></pre></td></tr></table></figure>
+<p>以下是几个输入的地方:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">(en/br/cn/de/el/es/fr/hu/it/jp/nl/pl/ru/sr/tr) [en]: en  #使用英文安装的方式</div><div class="line">What kind of installation do you want (server, agent, local, hybrid or help)? agent   #安装的类型</div><div class="line">Choose where to install the OSSEC HIDS [/var/ossec]:   #安装的路径  默认就行  直接回车</div><div class="line">What&apos;s the IP Address or hostname of the OSSEC HIDS server?: 192.168.31.111  #输入你服务端的地址</div><div class="line">Do you want to run the integrity check daemon? (y/n) [y]:  #默认回车 </div><div class="line">Do you want to run the rootkit detection engine? (y/n) [y]: #rootkit 检查  默认回车</div><div class="line">Do you want to enable active response? (y/n) [y]: #默认回车</div></pre></td></tr></table></figure>
+<p>之后等待安装完毕</p>
+<ul>
+<li>回到ossim的操作界面(<code>https://192.168.31.111</code>) ,添加agent信息:</li>
+</ul>
+<p><img src="/images/ossim/1.png" alt="图片"></p>
+<blockquote>
+<p>注意:<br><strong>如果这里是安装win的客户端的话,添加的资产的系统类型一定要修改成win的,否则无法下载客户端</strong></p>
+</blockquote>
+<p>可以看到如下的结果,然后点击图中标示的位置,复制得到的key:</p>
+<p><img src="/images/ossim/2.png" alt="图片"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">key:</div><div class="line">MyBIb3N0LTE5Mi0xNjgtMzEtOTcgMTkyLjE2OC4zMS45NyA5YTBh0OTFlZDQ2ZTUwMmQ1MWQ2MGE3YzA2NDgxZTIzZTIyOGUxZjIzNTJlM2FkM2FkNTkxYjNiY2Fh</div></pre></td></tr></table></figure>
+<ul>
+<li>在客户端的命令行执行<code>manage_agents</code>,按照提示输入key:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"># /var/ossec/bin/manage_agents</div><div class="line"></div><div class="line">****************************************</div><div class="line">* OSSEC HIDS v2.8 Agent manager.     *</div><div class="line">* The following options are available: *</div><div class="line">****************************************</div><div class="line">   (I)mport key from the server (I).</div><div class="line">   (Q)uit.</div><div class="line">Choose your action: I or Q: I     #输入i</div><div class="line"></div><div class="line">* Provide the Key generated by the server.</div><div class="line">* The best approach is to cut and paste it.</div><div class="line">*** OBS: Do not include spaces or new lines.</div><div class="line"></div><div class="line">Paste it here (or &apos;\q&apos; to quit):   MyBIb3N0LTE5Mi0xNjgtMzEtOTcgMTkyLjE2OC4zMS45NyA5YTBhODA0OTFlZDQ2ZTUwMmQ1MWQ2MGE3YzA2NDgxZTIzZTIyOGUxZjIzNTJlM2FkM2FkNTk5NYjNiY2Fh    #粘贴上key </div><div class="line"></div><div class="line">Agent information:</div><div class="line">   ID:3</div><div class="line">   Name:Host-192-168-31-97</div><div class="line">   IP Address:192.168.31.97</div><div class="line"></div><div class="line">Confirm adding it?(y/n): Y   #确认信息</div><div class="line">Added.</div><div class="line">** Press ENTER to return to the main menu.</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">****************************************</div><div class="line">* OSSEC HIDS v2.8 Agent manager.     *</div><div class="line">* The following options are available: *</div><div class="line">****************************************</div><div class="line">   (I)mport key from the server (I).</div><div class="line">   (Q)uit.</div><div class="line">Choose your action: I or Q: Q  #输入q  退出</div><div class="line"></div><div class="line">** You must restart OSSEC for your changes to take effect.</div><div class="line"></div><div class="line">manage_agents: Exiting ..</div></pre></td></tr></table></figure>
+<p>此时,已经完成了客户端的安装,过一段时间之后可以看到客户端的状态是<code>active</code>.</p>
+<hr>
+<h1 id="排错"><a href="#排错" class="headerlink" title="排错"></a>排错</h1><p>整个安装的过程很简单,但是有些时候总是会出现各种问题:</p>
+<h2 id="问题1-怎么查看客户端的日志"><a href="#问题1-怎么查看客户端的日志" class="headerlink" title="问题1:怎么查看客户端的日志:"></a>问题1:怎么查看客户端的日志:</h2><p>客户端日志的位置位于<code>/var/ossec/logs/ossec.log</code>,可以通过使用命令<code>tail -40f /var/ossec/logs/ossec.log</code>查看日志信息,在排错中会起到相当重要的作用.</p>
+<hr>
+<h2 id="问题2-为什么ossim制台一直显示agent是未连接-Disconnected-的状态"><a href="#问题2-为什么ossim制台一直显示agent是未连接-Disconnected-的状态" class="headerlink" title="问题2:为什么ossim制台一直显示agent是未连接(Disconnected)的状态:"></a>问题2:为什么ossim制台一直显示agent是未连接(Disconnected)的状态:</h2><p>这个时候可以先查看下客户端的日志:<code>tail -40f /var/ossec/logs/ossec.log</code></p>
+<p>然后重启下客户端进程:<code>/var/ossec/bin/ossec-control restart</code></p>
+<p>查看下进程的状态:<code>/var/ossec/bin/ossec-control status</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ossec-logcollector is running...</div><div class="line">ossec-syscheckd is running...</div><div class="line">ossec-agentd is running...</div><div class="line">ossec-execd is running...</div></pre></td></tr></table></figure>
+<p>如果都运行状态,表示已经成功启动服务,在看看上面的日志输出情况,如果可以正常连接服务器,则表示成功.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">2017/01/09 12:50:56 ossec-agentd: INFO: Trying to connect to server (192.168.31.111:1514).</div><div class="line">2017/01/09 12:50:56 ossec-agentd: INFO: Using IPv4 for: 192.168.31.111 .</div><div class="line">2017/01/09 12:50:57 ossec-agentd(4102): INFO: Connected to the server (192.168.31.111:1514).  #成功连接</div><div class="line">2017/01/09 12:51:00 ossec-syscheckd: INFO: Started (pid: 22595).</div><div class="line">2017/01/09 12:51:00 ossec-rootcheck: INFO: Started (pid: 22595).</div><div class="line">2017/01/09 12:51:00 ossec-syscheckd: INFO: Monitoring directory: &apos;/etc&apos;.</div><div class="line">2017/01/09 12:51:00 ossec-syscheckd: INFO: Monitoring directory: &apos;/usr/bin&apos;.</div><div class="line">2017/01/09 12:51:00 ossec-syscheckd: INFO: Monitoring directory: &apos;/usr/sbin&apos;.</div><div class="line">2017/01/09 12:51:00 ossec-syscheckd: INFO: Monitoring directory: &apos;/bin&apos;.</div><div class="line">2017/01/09 12:51:00 ossec-syscheckd: INFO: Monitoring directory: &apos;/sbin&apos;.</div><div class="line">2017/01/09 12:51:00 ossec-syscheckd: INFO: Monitoring directory: &apos;/opt/cc.txt&apos;.</div><div class="line">2017/01/09 12:51:00 ossec-syscheckd: INFO: Directory set for real time monitoring: &apos;/opt/cc.txt&apos;.</div></pre></td></tr></table></figure>
+<p>还可以在ossim服务端通过命令行的方式来查看下已经有哪些agent连接上来:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">alienvault:~# /var/ossec/bin/agent_control -lc  #-lc 表示显示已经成功连接服务端的客户端列表</div><div class="line"></div><div class="line">OSSEC HIDS agent_control. List of available agents:</div><div class="line">   ID: 000, Name: alienvault (server), IP: 127.0.0.1, Active/Local</div><div class="line">   ID: 2, Name: Host-192-168-31-98, IP: 192.168.31.98, Active</div><div class="line">   ID: 3, Name: Host-192-168-31-97, IP: 192.168.31.97, Active</div></pre></td></tr></table></figure>
+<p>还可以查看服务端的1514端口的流量信息,看看是否有日志传输过来<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ngrep -q -d any port 1514</div></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="问题3-通过命令-var-ossec-bin-agent-control-lc-已经可以看到添加-agent是Active状态-但是ossim的控制台还是Disconnected-是怎么回事"><a href="#问题3-通过命令-var-ossec-bin-agent-control-lc-已经可以看到添加-agent是Active状态-但是ossim的控制台还是Disconnected-是怎么回事" class="headerlink" title="问题3:通过命令/var/ossec/bin/agent_control -lc 已经可以看到添加 agent是Active状态,但是ossim的控制台还是Disconnected,是怎么回事."></a>问题3:通过命令<code>/var/ossec/bin/agent_control -lc</code> 已经可以看到添加 agent是<code>Active</code>状态,但是ossim的控制台还是<code>Disconnected</code>,是怎么回事.</h2><p>这里貌似存在一定的延时,可以过一段时间在看看,另外可以通过以下方法来判断是否客户端真的连接到了服务端:</p>
+<ul>
+<li><p>1 运行<code>tail -40f /var/ossec/logs/ossec.log</code></p>
+</li>
+<li><p>2 在ossim的控制台点击:<code>restart agent</code></p>
+</li>
+</ul>
+<p><img src="/images/ossim/3.png" alt="图片"></p>
+<p>可以看到日志变化了,在你点击<code>restart agent</code>,日志中显示,客户端已经重新启动,载入你要监控的文件,就表示已经连接到了服务端,功能已经可以正常启用了.至于控制台的显示,那就是他的问题了 0.0</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">2017/01/09 13:00:36 ossec-logcollector(1225): INFO: SIGNAL Received. Exit Cleaning...</div><div class="line">2017/01/09 13:00:36 ossec-syscheckd(1225): INFO: SIGNAL Received. Exit Cleaning...</div><div class="line">2017/01/09 13:00:36 ossec-agentd(1225): INFO: SIGNAL Received. Exit Cleaning...</div><div class="line">2017/01/09 13:00:36 ossec-execd(1314): INFO: Shutdown received. Deleting responses.</div><div class="line">2017/01/09 13:00:36 ossec-execd(1225): INFO: SIGNAL Received. Exit Cleaning...</div><div class="line">2017/01/09 13:00:37 ossec-execd: INFO: Started (pid: 22890).</div><div class="line">2017/01/09 13:00:37 ossec-agentd: INFO: Using notify time: 600 and max time to reconnect: 1800</div><div class="line">2017/01/09 13:00:37 ossec-agentd(1410): INFO: Reading authentication keys file.</div><div class="line">2017/01/09 13:00:37 ossec-agentd: INFO: Assigning counter for agent Host-192-168-31-97: &apos;2:2760&apos;.</div><div class="line">2017/01/09 13:00:37 ossec-agentd: INFO: Assigning sender counter: 54:9664</div><div class="line">2017/01/09 13:00:37 ossec-agentd: INFO: Started (pid: 22894).</div><div class="line">2017/01/09 13:00:37 ossec-agentd: INFO: Server IP Address: 192.168.31.111</div><div class="line">2017/01/09 13:00:37 ossec-agentd: INFO: Trying to connect to server (192.168.31.111:1514).</div><div class="line">2017/01/09 13:00:37 ossec-agentd: INFO: Using IPv4 for: 192.168.31.111 .</div><div class="line">2017/01/09 13:00:38 ossec-agentd(4102): INFO: Connected to the server (192.168.31.111:1514).</div></pre></td></tr></table></figure>
+<h1 id="服务器命令"><a href="#服务器命令" class="headerlink" title="服务器命令"></a>服务器命令</h1><p>这里还有一些服务器端的命令介绍:</p>
+<p><code>/var/ossec/bin/agent_control</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">代理控制参数选项：</div><div class="line">-h                         显示帮助消息</div><div class="line">-l                         列出所有可能的代理</div><div class="line">-lc                        列出活动的代理</div><div class="line">-i  &lt;agent_id&gt;     		   获取代理的相关信息 agent_id</div><div class="line">-r                         运行代理中的integrity/rootcheck检查，要和-u或-a 一起使用。</div><div class="line">-a                         对所有代理起做用</div><div class="line">-u    &lt;agent_id&gt;     	   &lt;agent_id&gt;预先指定代理ID号</div></pre></td></tr></table></figure>
+<ul>
+<li>1 比如,上面已经提到的查看活动的代理:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">alienvault:~# /var/ossec/bin/agent_control -lc</div><div class="line"></div><div class="line">OSSEC HIDS agent_control. List of available agents:</div><div class="line">   ID: 000, Name: alienvault (server), IP: 127.0.0.1, Active/Local</div><div class="line">   ID: 2, Name: Host-192-168-31-98, IP: 192.168.31.98, Active</div><div class="line">   ID: 3, Name: Host-192-168-31-97, IP: 192.168.31.97, Active</div></pre></td></tr></table></figure>
+<ul>
+<li>2 获取特定代理的信息:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">alienvault:~# /var/ossec/bin/agent_control -i 3</div><div class="line"></div><div class="line">OSSEC HIDS agent_control. Agent information:</div><div class="line">   Agent ID:   3</div><div class="line">   Agent Name: Host-192-168-31-97</div><div class="line">   IP address: 192.168.31.97</div><div class="line">   Status:     Active</div><div class="line"></div><div class="line">   Operating system:    Linux 2.6.24-16-#1 SMP Thu Apr 10 13..</div><div class="line">   Client version:      OSSEC HIDS v2.8</div><div class="line">   Last keep alive:     Mon Jan  9 13:08:46 2017</div><div class="line"></div><div class="line">   Syscheck last started  at: Mon Jan  9 12:50:11 2017</div><div class="line">   Rootcheck last started at: Mon Jan  9 08:35:02 2017</div></pre></td></tr></table></figure>
+<ul>
+<li>3 查看修改的文件的时间和权限:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">alienvault:# /var/ossec/bin/syscheck_control -i 3 </div><div class="line"></div><div class="line">Integrity changes for agent &apos;Host-192-168-31-97 (3) - 192.168.31.97&apos;:</div><div class="line">Changes for 2016 Dec 15:</div><div class="line">2016 Dec 15 12:34:30,0 - /etc/ossec-init.conf</div><div class="line">2016 Dec 15 12:38:32,0 - /etc/init.d/.depend.stop</div><div class="line">2016 Dec 15 12:38:34,0 - /etc/init.d/.depend.start</div><div class="line">2016 Dec 15 12:47:56,0 - /etc/ossec-init.conf</div><div class="line">2016 Dec 15 12:51:59,0 - /etc/init.d/.depend.stop</div><div class="line">2016 Dec 15 12:52:01,0 - /etc/init.d/.depend.start</div></pre></td></tr></table></figure>
+<ul>
+<li>4 查看某被监控文件的信息</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">alienvault:# /var/ossec/bin/syscheck_control -i 3 -f /etc/ossec-init.conf</div><div class="line"></div><div class="line">Integrity changes for agent &apos;Host-192-168-31-97 (3) - 192.168.31.97&apos;:</div><div class="line">Detailed information for entries matching: &apos;/etc/ossec-init.conf&apos;</div><div class="line"></div><div class="line">2016 Dec 15 12:34:30,0 - /etc/ossec-init.conf</div><div class="line">File added to the database.</div><div class="line">Integrity checking values:</div><div class="line">   Size: 101</div><div class="line">   Perm: rw-------</div><div class="line">   Uid:  0</div><div class="line">   Gid:  0</div><div class="line">   Md5:  d689f85738933f1a04a8b15ec1528262</div><div class="line">   Sha1: a9339b82857a253826c234aaf6aaafc8e0876b6c</div></pre></td></tr></table></figure>
+<ul>
+<li>5 重新进行integrity/rootcheck检查</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">alienvault:~# /var/ossec/bin/agent_control -r -u 3</div><div class="line"></div><div class="line">OSSEC HIDS agent_control: Restarting Syscheck/Rootcheck on agent: 3</div></pre></td></tr></table></figure>
+<p>执行完成之后,通过查看客户端的日志,也能看到重新检查的日志信息</p>
+<ul>
+<li>6 清除数据库</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/var/ossec/bin/syscheck_control -u 3</div></pre></td></tr></table></figure>
+<blockquote>
+<p>ossim安全交流群:46820390</p>
+</blockquote>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2016/01/10/ossim-OTX-ACCOUNT/" style="float: left;">
+        ← OSSIM-OTX 账号申请流程
+    </a>
+    
+    
+    <a class="pull-right" href="/2015/12/06/mac GourdScan /">
+        mac搭建GourdScan →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+
+
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By AnSudong. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      (function(){
+        console.log('font');
+        var getCss = function(path) {
+          var head = document.getElementsByTagName('head')[0];
+          link = document.createElement('link');
+          link.href = path;
+          link.rel = 'stylesheet';
+          link.type = 'text/css';
+          head.appendChild(link);
+        };
+        getCss('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+        getCss('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+      })();
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>

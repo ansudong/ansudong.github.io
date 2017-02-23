@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>2_Git之创建代码仓库 | AnSudong</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="AnSudong">
+    <meta name="author" content="AnSudong">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="AnSudong" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">AnSudong</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2015-01-29T05:15:39.000Z" itemprop="datePublished">
+          2015-01-29
+      </time>
+    
+    
+    | 
+    <a href='/tags/git/'>git</a>,
+    
+    <a href='/tags/指南/'>指南</a>
+    
+    
+</span>
+                <h1>2_Git之创建代码仓库</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<hr>
+<blockquote>
+<p>转载：感谢<a href="https://github.com/geeeeeeeeek" target="_blank" rel="external">童仲毅</a>同学写了该系列文章，我只是搬运工，谢谢!</p>
+</blockquote>
+<p>这一章简要地带你了解一些最重要的Git命令。在这节中，我会向你介绍开始一个新的版本控制项目需要的所有工具，后面的几节包含了你每天都会用到的Git操作。</p>
+<p>在这节之后，你应该能够创建一个新的Git仓库，缓存你的项目以免丢失，以及查看你项目的历史。</p>
+<h2 id="git-init"><a href="#git-init" class="headerlink" title="git init"></a>git init</h2><p><code>git init</code>命令创建一个新的Git仓库。它用来将已存在但还没有版本控制的项目转换成一个Git仓库，或者创建一个空的新仓库。大多数Git命令在未初始化的仓库中都是无法使用的，所以这就是你运行新项目的第一个命令了。</p>
+<p>运行<code>git init</code>命令会在你项目的根目录下创建一个新的<code>.git</code>目录，其中包含了你项目必需的所有元数据。除了<code>.git</code>目录之外，已经存在的项目不会被改变（就像SVN一样，Git不强制每个子目录中都有一个<code>.git</code>目录）。<br><a id="more"></a></p>
+<h3 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git init</div></pre></td></tr></table></figure>
+<p>将当前的目录转换成一个Git仓库。它在当前的目录下增加了一个<code>.git</code>文件夹，于是就可以开始记录项目版本了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git init &lt;directory&gt;</div></pre></td></tr></table></figure>
+<p>在指定目录创建一个空的Git仓库。运行这个命令会创建一个名为<code>directory</code>，只包含<code>.git</code>子目录的空文件夹。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git init --bare &lt;directory&gt;</div></pre></td></tr></table></figure>
+<p>初始化一个裸的Git仓库，但是忽略工作目录。共享的仓库应该总是用<code>--bare</code>标记创建（见下面的讨论）。一般来说，用<code>—bare</code>标记初始化的仓库以<code>.git</code>结尾。比如，一个叫<code>my-project</code>的仓库，它的空版本应该保存在<code>my-project.git</code>目录下。</p>
+<h3 id="讨论"><a href="#讨论" class="headerlink" title="讨论"></a>讨论</h3><p>和SVN相比，<code>git init</code>命令是一个创建新的版本控制项目非常简单的途径。Git不需要你创建仓库，导入文件，检查正在修改的拷贝。你只需要<code>cd</code>到你的项目目录下，运行<code>git init</code>，你就有了一个功能强大的Git仓库。</p>
+<p>但是，对大多数项目来说，<code>git init</code>只需要在创建中央仓库时执行一次——开发者通常不会使用<code>git init</code>来创建他们的本地仓库。他们往往使用<code>git clone</code>来将已存在的仓库拷贝到他们的机器中去。</p>
+<h4 id="裸仓库"><a href="#裸仓库" class="headerlink" title="裸仓库"></a>裸仓库</h4><p><code>—bare</code>标记创建了一个没有工作目录的仓库，这样我们在仓库中更改文件并且提交了。中央仓库应该总是创建成裸仓库，因为向非裸仓库推送分支有可能会覆盖已有的代码变动。将<code>—bare</code>看成是用来将仓库标记为储存设施，而不是一个开发环境。也就是说，对于所有的Git工作流，中央仓库是裸仓库，开发者的本地仓库是非裸仓库。</p>
+<p><img src="https://www.atlassian.com/git/images/tutorials/getting-started/setting-up-a-repository/01.svg" alt=""></p>
+<h3 id="栗子"><a href="#栗子" class="headerlink" title="栗子"></a>栗子</h3><p>因为<code>git clone</code>创建项目的本地拷贝更为方便，<code>git init</code>最常见的使用情景就是用于创建中央仓库：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">ssh &lt;user&gt;@&lt;host&gt;</div><div class="line"></div><div class="line">cd path/above/repo </div><div class="line"></div><div class="line">git init --bare my-project.git</div></pre></td></tr></table></figure>
+<p>首先，你用SSH连入存放中央仓库的服务器。然后，来到任何你想存放项目的地方，最后，使用<code>—bare</code>标记来创建一个中央存储仓库。开发者会将<code>my-project.git</code> 克隆到本地的开发环境中。</p>
+<h2 id="git-clone"><a href="#git-clone" class="headerlink" title="git clone"></a>git clone</h2><p><code>git clone</code>命令拷贝整个Git仓库。这个命令就像<code>svn checkout</code>一样，除了”工作副本“是一个完备的Git仓库——它包含自己的历史，管理自己的文件，以及环境和原仓库完全隔离。</p>
+<p>为了方便起见，<code>clone</code>自动创建了一个名为<code>origin</code>的远程连接，指向原有仓库。这让和中央仓库之间的交互更加简单。</p>
+<h3 id="用法-1"><a href="#用法-1" class="headerlink" title="用法"></a>用法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone &lt;repo&gt;</div></pre></td></tr></table></figure>
+<p>将位于<code>&lt;repo&gt;</code>的仓库克隆到本地机器。原仓库可以在本地文件系统中，或是通过HTTP或SSH连接的远程机器。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone &lt;repo&gt; &lt;directory&gt;</div></pre></td></tr></table></figure>
+<p>将位于<code>&lt;repo&gt;</code>的仓库克隆到本地机器上的<code>&lt;directory&gt;</code>文件夹。</p>
+<h3 id="讨论-1"><a href="#讨论-1" class="headerlink" title="讨论"></a>讨论</h3><p>如果项目在远程仓库已经设置完毕，<code>git clone</code>是用户获取开发副本最常见的方式。和<code>git init</code>相似，<code>clone</code>通常也是一次性的操作——只要开发者获得了一份工作副本，所有版本控制操作和协作管理都是在本地仓库中完成的。</p>
+<h4 id="仓库间协作"><a href="#仓库间协作" class="headerlink" title="仓库间协作"></a>仓库间协作</h4><p>这一点很重要，你要理解Git中”工作副本“的概念和SVN仓库check out下来的”工作副本“是很不一样的。和SVN不同的是，Git不会区分工作副本和中央仓库——它们都是功能完备的Git仓库。</p>
+<p>这就似的Git的协作和SVN截然不同。SVN依赖于中央仓库和工作副本之间的关系，而Git协作模型是基于仓库和仓库之间的交互的。相对于SVN的提交流程，你可以在Git仓库之间<code>push</code>或<code>pull</code>提交。</p>
+<p><img src="https://www.atlassian.com/git/images/tutorials/getting-started/setting-up-a-repository/03.svg" alt=""></p>
+<p><img src="https://www.atlassian.com/git/images/tutorials/getting-started/setting-up-a-repository/02.svg" alt=""></p>
+<p>当然，你也完全可以给予某个特定的仓库一些特殊的含义。比如，指定某个Git仓库为中央仓库，你就可以用Git进行中央化的工作流。重点是，这是通过约定实现的，而不是写死在版本控制系统本身。</p>
+<h3 id="栗子-1"><a href="#栗子-1" class="headerlink" title="栗子"></a>栗子</h3><p>下面这个例子演示用SSH用户名john连接到example.com，获取远程服务器上中央仓库的本地副本：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">git clone ssh://john@example.com/path/to/my-project.git </div><div class="line"></div><div class="line">cd my-project</div><div class="line"></div><div class="line"># 开始工作</div></pre></td></tr></table></figure>
+<p>第一行命令在本地机器的<code>my-project</code>文件夹下初始化了一个新的Git仓库，并且导入了中央仓库中的文件。接下来，你<code>cd</code>到项目目录，开始编辑文件、缓存提交、和其它仓库交互。同时注意<code>.git</code>拓展名克隆时会被去除。它表明了本地副本的非裸状态。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config</div></pre></td></tr></table></figure>
+<p><code>git config</code>命令允许你在命令行中配置你的Git安装（或是一个独立仓库）。这个命令定义了所有配置，从用户信息到仓库行为等等。一些常见的配置命令如下所列。</p>
+<h3 id="用法-2"><a href="#用法-2" class="headerlink" title="用法"></a>用法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config user.name &lt;name&gt;</div></pre></td></tr></table></figure>
+<p>定义当前仓库所有提交使用的作者姓名。通常来说，你希望使用<code>--global</code>标记设置当前用户的配置项。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config --global user.name &lt;name&gt;</div></pre></td></tr></table></figure>
+<p>定义当前用户所有提交使用的作者姓名。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config --global user.email &lt;email&gt;</div></pre></td></tr></table></figure>
+<p>定义当前用户所有提交使用的作者邮箱。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config --global alias.&lt;<span class="built_in">alias</span>-name&gt; &lt;git-command&gt;</div></pre></td></tr></table></figure>
+<p>为Git命令创建一个快捷方式（别名）。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config --system core.editor &lt;editor&gt;</div></pre></td></tr></table></figure>
+<p>定义当前机器所有用户使用命令时用到的文本编辑器，如<code>git commit</code>。<code>&lt;editor&gt;</code>参数用编辑器的启动命令（如vi）替代。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config --global --edit</div></pre></td></tr></table></figure>
+<p>用文本编辑器打开全局配置文件，手动编辑。</p>
+<h3 id="讨论-2"><a href="#讨论-2" class="headerlink" title="讨论"></a>讨论</h3><p>所有配置项都储存在纯文本文件中，所以<code>git config</code>命令其实只是一个提供便捷的命令行接口。通常，你只需要在新机器上配置一次Git安装，以及，你通常会想要使用<code>--global</code>标记。</p>
+<p>Git将配置项保存在三个单独的文件中，允许你分别对单个仓库、用户和整个系统设置。</p>
+<ul>
+<li><repo>/.git/config – 特定仓库的设置。</repo></li>
+</ul>
+<ul>
+<li>~/.gitconfig – 特定用户的设置。这也是<code>--global</code>标记的设置项存放的位置。</li>
+</ul>
+<ul>
+<li>$(prefix)/etc/gitconfig – 系统层面的设置。</li>
+</ul>
+<p>当这些文件中的配置项冲突时，本地仓库设置覆盖用户设置，用户设置覆盖系统设置。如果你打开期中一份文件，你会看到下面这些：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">[user] </div><div class="line"></div><div class="line">name = John Smith</div><div class="line"></div><div class="line">email = john@example.com</div><div class="line"></div><div class="line">[<span class="built_in">alias</span>]</div><div class="line"></div><div class="line">st = status</div><div class="line"></div><div class="line">co = checkout</div><div class="line"></div><div class="line">br = branch</div><div class="line"></div><div class="line">up = rebase</div><div class="line"></div><div class="line">ci = commit</div><div class="line"></div><div class="line">[core]</div><div class="line"></div><div class="line">editor = vim</div></pre></td></tr></table></figure>
+<p>你可以用<code>git config</code>手动编辑这些值。</p>
+<h3 id="栗子-2"><a href="#栗子-2" class="headerlink" title="栗子"></a>栗子</h3><p>你在安装Git之后想要做的第一件事是告诉它你的名字和邮箱，个性化一些默认设置。一般初始的设置过程看上去是这样的：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 告诉Git你是谁</span></div><div class="line"></div><div class="line">git config --global user.name <span class="string">"John Smith"</span></div><div class="line"></div><div class="line">git config --global user.email john@example.com</div><div class="line"></div><div class="line"><span class="comment"># 选择你喜欢的文本编辑器</span></div><div class="line"></div><div class="line">git config --global core.editor vim</div><div class="line"></div><div class="line"><span class="comment"># 添加一些快捷方式(别名)</span></div><div class="line"></div><div class="line">git config --global alias.st status</div><div class="line"></div><div class="line">git config --global alias.co checkout</div><div class="line"></div><div class="line">git config --global alias.br branch</div><div class="line"></div><div class="line">git config --global alias.up rebase</div><div class="line"></div><div class="line">git config --global alias.ci commit</div></pre></td></tr></table></figure>
+<p>它会生成上一节中所说的<code>~/.gitconfig</code>文件。</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2015/01/30/1_Git/" style="float: left;">
+        ← 1-Git之快速指南
+    </a>
+    
+    
+    <a class="pull-right" href="/2015/01/28/3_Git/">
+        3_Git之保存你的更改 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+
+
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By AnSudong. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      (function(){
+        console.log('font');
+        var getCss = function(path) {
+          var head = document.getElementsByTagName('head')[0];
+          link = document.createElement('link');
+          link.href = path;
+          link.rel = 'stylesheet';
+          link.type = 'text/css';
+          head.appendChild(link);
+        };
+        getCss('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+        getCss('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+      })();
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
