@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>sketch绝好用的插件一：User Flows | AnSudong</title>
+  <meta name="description" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="/css/screen.css" />
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <meta name="generator" content="AnSudong">
+
+  
+  
+  
+
+  
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body class="home-template">
+<div id="perspective" class="perspective effect-movedown">
+  <div class="container">
+    <!-- wrapper -->
+    <div class="wrapper">
+
+      <header class="site-head"  style="background: #24282b url(/img/img-bg.jpg) 0 -20%" >
+    <div class="vertical">
+        <div class="site-head-content inner">
+             <a class="blog-logo" href="/"><img src="/img/logo.svg" alt="Blog Logo"/></a> 
+            <h1 class="blog-title">AnSudong</h1>
+            <h2 class="blog-description"><button id="showMenu">Show Menu</button></h2>
+        </div>
+    </div>
+</header>
+
+      
+
+<main class="content" role="main">
+  <article class="post">
+    <span class="post-meta">
+      <time datetime="2017-02-19T13:07:32.000Z" itemprop="datePublished">
+          2017-02-19
+      </time>
+    
+    
+    | 
+    <a href='/tags/UI设计/'>UI设计</a>,
+    
+    <a href='/tags/产品设计/'>产品设计</a>,
+    
+    <a href='/tags/Articles/'>Articles</a>,
+    
+    <a href='/tags/sketch/'>sketch</a>
+    
+    
+</span>
+    <h1 class="post-title">sketch绝好用的插件一：User Flows</h1>
+    <section class="post-content">
+      <div align="center"><img width="200" src="/images/chajian-flows/0.png"></div>
+
+<p>　　终于做完了app，搞完了规范，本想喘口气歇歇，等等，发给开发之前，为了开发看的明白，看的透彻，看的舒爽，咱们还得搞个，，流程图……一两百个界面……哭…搞的头晕有木有。今天发现了一个神器：User Flows，童鞋们欢呼吧，雀跃吧，sketch简直良心大大的好哇，太特么贴心了！<br>　　废话不多说，来来搞起来</p>
+<a id="more"></a>
+<h4 id="下载，安装"><a href="#下载，安装" class="headerlink" title="下载，安装"></a>下载，安装</h4><p>（怎么安装我就不说了，轻且浅的小朋友不在赘述之列）</p>
+<blockquote>
+<p>官方下载地址<a href="https://abynim.github.io/UserFlows/" target="_blank" rel="external">https://abynim.github.io/UserFlows/</a></p>
+</blockquote>
+<!--more-->
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p>　　需要定义两个画板之间的链接：选择一个图层和目标画板后执行定义链接命令 <code>Plugins &gt; User Flows &gt; Create Link</code>快捷键是 <code>command + shift + k</code></p>
+<p><img src="/images/chajian-flows/1.png" alt="img"></p>
+<pre><code>此处注意：是选中一个图层和一个画板，不是一个图层和另外一个图层
+</code></pre><h4 id="添加条件"><a href="#添加条件" class="headerlink" title="添加条件"></a>添加条件</h4><p>　　可执行 添加 / 编辑条件命令 <code>Plugins &gt; User Flows &gt; Add/Edit Conditions</code>或使用快捷键<code>command + shift + D</code>   然后放在合适的位置即可<br>编辑条件：</p>
+<p><img src="/images/chajian-flows/2.png" alt="img"></p>
+<p>　　保存后，出现一小画板:</p>
+<p><img src="/images/chajian-flows/3.png" alt="img"></p>
+<p>　　点击条件按钮和下一层次的画板做连接：</p>
+<p><img src="/images/chajian-flows/4.png" alt="img"></p>
+<h4 id="显示和隐藏链接："><a href="#显示和隐藏链接：" class="headerlink" title="显示和隐藏链接："></a>显示和隐藏链接：</h4><p>　　隐藏连接线<code>Plugins &gt; User Flows &gt; Hide Connections</code><br>　　所有快捷键：<code>Plugins &gt; User Flows &gt; User Shortcuts</code>可以自己设定快捷键</p>
+<p><img src="/images/chajian-flows/5.png" alt="img"></p>
+<p>　　想改变连接线的颜色和粗细也是没问题：</p>
+<p><img src="/images/chajian-flows/6.png" alt="img"></p>
+<h4 id="生成流程图"><a href="#生成流程图" class="headerlink" title="生成流程图"></a>生成流程图</h4><p>　　定义所有链接后，执行生成流程图命令 Plugins &gt; User Flows &gt; Generate Flow Diagram 或使用快捷键 command + shift +F选择开始屏幕，输入流程的详细信息，然后单击生成</p>
+<p><img src="/images/chajian-flows/7.png" alt="img"></p>
+<p>　　生成的文件是新建了一个页面，默认是<code>_flows</code>，是图片不可编辑。</p>
+<pre><code>注意：可自定义从哪张图片开始导出，但是没有定义在哪张结束，默认的是只导出有连接线的图，一连串的，突然断了，他就不导出了。所以想要这个流程图的童鞋，每张都不要断哦
+</code></pre>
+    </section>
+    <footer class="post-footer">
+      <section class="author">
+    <h4>AnSudong</h4>
+    <p>唯有爱和设计不可辜负！</p>
+</section>
+      <section class="share">
+    <h4>Share this post</h4>
+    <a class="icon-sina-weibo" href="http://v.t.sina.com.cn/share/share.php?title=唯有爱和设计不可辜负！ ?url=http://yoursite.com/2017/02/19/sketch_User_Flows/" target="_blank">
+        <span class="hidden">weibo</span>
+    </a>
+    <a class="icon-twitter" href="http://twitter.com/share?url=http://yoursite.com/2017/02/19/sketch_User_Flows/"
+       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+        <span class="hidden">Twitter</span>
+    </a>
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/02/19/sketch_User_Flows/"
+       onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+        <span class="hidden">Facebook</span>
+    </a>
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=http://yoursite.com/2017/02/19/sketch_User_Flows/"
+       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+        <span class="hidden">Google+</span>
+    </a>
+</section>
+
+    </footer>
+  </article>
+  <nav class="pagination" role="pagination">
+    
+    <span class="icon-logo">•</span>
+    
+    <a class="older-posts" href="/2017/01/10/eis_web/">
+        近期作品整理-EIS_WEB →
+    </a>
+    
+</nav>
+
+  <div id="comment" class="comments-area">
+    <h4 class="title"><a href="#disqus_comments" name="disqus_comments">Comments</a></h4>
+    
+</div>
+
+</main>
+
+
+      
+<footer class="site-footer">
+  
+  <div class="inner">
+     <section class="copyright">All content copyright <a href="/">AnSudong</a> &copy; 2014 &bull; All rights reserved.</section>
+     <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://zespia.tw/hexo/">Hexo</a></section>
+  </div>
+</footer>
+
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script type="text/javascript" src="/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
+<script type="text/javascript" src="/js/menu.js"></script>
+
+
+
+
+
+  </div>
+</div>
+
+<nav  class="outer-nav top horizontal">
+
+          <a class="icon-home"  href="/"><span>Home</span></a>
+
+          <a class="icon-news"  href="/tags/app/"><span>App</span></a>
+
+          <a class="icon-image"  href="/tags/web/"><span>Web</span></a>
+
+          <a class="icon-wiki"  href="/tags/Articles/"><span>Articles</span></a>
+
+          <a class="icon-Favorites"  href="/"><span>Experience</span></a>
+
+          <a class="icon-mail"  href="/2013/01/07/about_me/"><span>Contact</span></a>
+
+</nav>
+
+</div>
+</body>
+</html>
